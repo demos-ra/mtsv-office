@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oor:component-data xmlns:oor="http://openoffice.org/2001/registry" oor:package="org.openoffice.TypeDetection" oor:name="Types">
+  <node oor:name="Types">
+    <node oor:name="io.github.demos-ra.mtsv-office.MTSV" oor:op="replace">
+      <prop oor:name="UIOrder"><value>0</value></prop>
+      <prop oor:name="URLPattern"/>
+      <prop oor:name="Extensions"><value>mtsv</value></prop>
+      <prop oor:name="DocumentIconID"><value>0</value></prop>
+      <prop oor:name="MediaType"><value>text/prs.mtsv</value></prop>
+      <prop oor:name="Preferred"><value>false</value></prop>
+      <prop oor:name="PreferredFilter"/>
+      <prop oor:name="UIName"><value xml:lang="en-US">Multi-Sheet Tab-Separated Values (MTSV)</value></prop>
+      <prop oor:name="ClipboardFormat"/>
+      <prop oor:name="DetectService"><value>io.github.demos-ra.mtsv-office.ExtendedTypeDetection</value></prop>
+    </node>
+  </node>
+</oor:component-data>

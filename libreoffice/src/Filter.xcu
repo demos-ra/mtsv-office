@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oor:component-data xmlns:oor="http://openoffice.org/2001/registry" oor:package="org.openoffice.TypeDetection" oor:name="Filter">
+  <node oor:name="Filters">
+    <node oor:name="io.github.demos-ra.mtsv-office.MTSV Spreadsheet" oor:op="replace">
+      <prop oor:name="FileFormatVersion"><value>0</value></prop>
+      <prop oor:name="Type"><value>io.github.demos-ra.mtsv-office.MTSV</value></prop>
+      <prop oor:name="DocumentService"><value>com.sun.star.sheet.SpreadsheetDocument</value></prop>
+      <prop oor:name="UIComponent"/>
+      <prop oor:name="UserData"/>
+      <prop oor:name="FilterService"><value>io.github.demos-ra.mtsv-office.Filter</value></prop>
+      <prop oor:name="TemplateName"/>
+      <prop oor:name="Flags"><value>IMPORT EXPORT ALIEN 3RDPARTYFILTER</value></prop>
+      <prop oor:name="UIName"><value xml:lang="en-US">Multi-Sheet Tab-Separated Values (MTSV)</value></prop>
+      <prop oor:name="Enabled"><value>true</value></prop>
+    </node>
+  </node>
+</oor:component-data>
