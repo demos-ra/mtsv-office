@@ -5,12 +5,12 @@
 Multi-Sheet Tab-Separated Values (MTSV) is TSV with one more
 dimension: a tab separates fields, a line break separates records, and
 a form feed separates sheets. A whole workbook is one plain-text file.
-This repository lets office applications open and save it, one tab per
-sheet: LibreOffice Calc now, Excel next.
+This repository lets office applications open and save it, one sheet
+for each MTSV sheet: LibreOffice Calc now, Excel next.
 
 | You are | What changes |
 |---|---|
-| **Spreadsheet user** | Open a `.mtsv` file in Calc and every sheet comes in as a tab, every field as text. Save it and it is one text file again. |
+| **Spreadsheet user** | Open a `.mtsv` file in Calc and every sheet comes in as a Calc sheet, every field as text. Save it and it is one text file again. |
 | **Developer** | A workbook you keep as MTSV is text: it diffs and merges line by line, and a Python program reads it with the [mtsv](https://github.com/demos-ra/mtsv) library. Calc becomes its editor. |
 | **AI model or agent** | A workbook a person keeps as MTSV is text you can read whole, every sheet; [text-spreadsheet](https://github.com/demos-ra/text-spreadsheet) reads the other formats as MTSV too. |
 
