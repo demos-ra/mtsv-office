@@ -1,69 +1,40 @@
-# mtsv-office
+mtsv-office
+===========
 
-**Open and save MTSV files in your spreadsheet application.**
+Open and save spreadsheets as plain text in your office apps: a LibreOffice
+Calc extension now, Excel next. Each file is Multi-Sheet Tab-Separated
+Values (MTSV), TSV with sheets, one Calc sheet for each MTSV sheet, so a
+whole workbook is one plain-text file.
 
-Multi-Sheet Tab-Separated Values (MTSV) is TSV with one more
-dimension: a tab separates fields, a line break separates records, and
-a form feed separates sheets. A whole workbook is one plain-text file.
-This repository lets office applications open and save it, one sheet
-for each MTSV sheet: LibreOffice Calc now, Excel next.
+Why It Is Useful
+----------------
 
-| You are | What changes |
-|---|---|
-| **Spreadsheet user** | Open a `.mtsv` file in Calc and every sheet comes in as a Calc sheet, every field as text. Save it and it is one text file again. |
-| **Developer** | A workbook you keep as MTSV is text: it diffs and merges line by line, and a Python program reads it with the [mtsv](https://github.com/demos-ra/mtsv) library. Calc becomes its editor. |
-| **AI model or agent** | A workbook a person keeps as MTSV is text you can read whole, every sheet; [text-spreadsheet](https://github.com/demos-ra/text-spreadsheet) reads the other formats as MTSV too. |
+A workbook kept as MTSV is plain text: it diffs and merges line by line, AI
+agents read it whole, and LibreOffice Calc becomes its spreadsheet editor.
+This repository holds no format code: every byte is read and written by the
+[mtsv](https://github.com/demos-ra/mtsv) library.
 
-## Quick start
+Get Started
+-----------
 
-```sh
-git clone https://github.com/demos-ra/mtsv-office
-cd mtsv-office/libreoffice
-make
-unopkg add build/mtsv-office.oxt
-```
+* Build the extension: `git clone https://github.com/demos-ra/mtsv-office`, then `cd mtsv-office/libreoffice` and `make`
+* Install it in LibreOffice: `unopkg add build/mtsv-office.oxt`
+* Use it: open a .mtsv file in Calc, and save it as Multi-Sheet Tab-Separated Values (MTSV)
+* What Calc keeps, what it leaves behind, and how to test: [libreoffice/README.md](libreoffice/README.md)
 
-Then open a `.mtsv` file in Calc, and save it as Multi-Sheet
-Tab-Separated Values (MTSV). See
-[libreoffice/README.md](libreoffice/README.md) for what Calc keeps,
-what it leaves behind, and how to test.
+Details
+-------
 
-## What it is
+* Specification: [MTSV, an IETF Internet-Draft](https://github.com/demos-ra/mtsv-spec)
+* Requirements: LibreOffice 26.2 or later, with unopkg; make, and Python 3.11 or later, to build; git, for `make check`; [mtsv](https://github.com/demos-ra/mtsv), at the version [libreoffice/Makefile](libreoffice/Makefile) pins, bundled by the build
+* Version: not yet released; the version of [libreoffice/src/description.xml](libreoffice/src/description.xml); versions follow [Semantic Versioning](https://semver.org)
+* Layout: [libreoffice/](libreoffice/README.md), the LibreOffice extension for Calc
+* License: [MIT](LICENSE)
 
-| Folder         | Contents                                      |
-|----------------|-----------------------------------------------|
-| `libreoffice/` | The LibreOffice extension, for Calc           |
+Get Help
+--------
 
-Each application folder is one extension or add-in, with its own build
-and tests. This repository holds no format code: every byte is read and
-written by mtsv, and what a spreadsheet holds that MTSV does not is
-left behind as mtsv reports it.
-
-## Requirements
-
-- LibreOffice 26.2 or later, with `unopkg`.
-- make, and Python 3.11 or later, to build.
-- git, for `make check`.
-
-## Versioning
-
-Not yet released. The version is the `version` of
-[libreoffice/src/description.xml](libreoffice/src/description.xml), and
-versions follow [Semantic Versioning](https://semver.org).
-
-## Author
-
-mtsv-office is created and maintained by Demos Ra. It is built on
-[MTSV](https://github.com/demos-ra/mtsv-spec), also created by Demos Ra
-and registered as an
-[IETF Internet-Draft](https://datatracker.ietf.org/doc/draft-demosra-mtsv/).
-
-## Help
-
-Report a problem or ask a question in the
-[issue tracker](https://github.com/demos-ra/mtsv-office/issues). Report
-a vulnerability as [SECURITY.md](SECURITY.md) says.
-
-## License
-
-[MIT](LICENSE)
+* Issues: [mtsv-office issue tracker](https://github.com/demos-ra/mtsv-office/issues)
+* Security: [SECURITY.md](SECURITY.md)
+* Maintainer: Demos Ra
+* More: [all MTSV tools by Demos Ra](https://github.com/demos-ra)
